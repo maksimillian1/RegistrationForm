@@ -6,26 +6,25 @@
     <title>Registration</title>
 </head>
 <body>
-Hello from Hell, bitch!
+<div align="center">List of all users</div>
 
 <c:forEach var="user" items="${requestScope.users}">
 
     <ul>
-        <li> <c:out value="${user.getName()}"/></li>
-        <li> <c:out value="${user.getSurname()}"/></li>
-        <li> <c:out value="${user.getAge()}"/></li>
+        <li> <c:out value="${user.getFirstName()}"/></li>
+        <li> <c:out value="${user.getLastName()}"/></li>
+        <li> <c:out value="${user.getDateOfBirth()}"/></li>
+        <%--<form method="post" action="<c:url value='/delete'/>">--%>
+            <%--<input type="submit" name="Delete" value="Delete">--%>
+        <%--</form>--%>
         <hr>
     </ul>
 
 </c:forEach>
 
-<form method="post", action="">
-    <label> <input type="text" name="name">Name</label><br>
-    <label> <input type="text" name="surname">Surname</label><br>
-    <label> <input type="number" name="age">Age</label><br>
-    <input type="submit" name="Ok" value="Ok"><br>
+<form method="post" action="<c:url value='/'/>">
+<input type="submit" name="Add user" value="Add user">
 </form>
-
 
 </body>
 </html>

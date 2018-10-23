@@ -4,13 +4,38 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <!--Main servlet-->
     <servlet>
         <servlet-name>MainServlet</servlet-name>
-        <servlet-class>com.gmail.snitchuk99.MainServlet</servlet-class>
+        <servlet-class>com.gmail.snitchuk99.servlets.MainServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>MainServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
+
+    <!--Adding page servlet-->
+    <servlet>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <servlet-class>com.gmail.snitchuk99.servlets.RegistrationServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>RegistrationServlet</servlet-name>
+        <url-pattern>/add_user</url-pattern>
+    </servlet-mapping>
+
+    <!--Delete user servlet-->
+    <servlet>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <servlet-class>com.gmail.snitchuk99.servlets.DeleteUserServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>DeleteUserServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
 </web-app>
